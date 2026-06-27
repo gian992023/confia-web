@@ -1,0 +1,29 @@
+/* ConfIA · estilos propios (complementan Tailwind CDN) */
+
+/* Render de tipografía más nítido */
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+/* Scroll suave solo si el usuario no pidió reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Foco visible y consistente para teclado en todos los interactivos */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #2563EB;
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Acordeón FAQ: rota el chevron cuando el panel está abierto */
+.faq-trigger[aria-expanded="true"] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* Evita desbordes horizontales en pantallas pequeñas */
+body { overflow-x: hidden; }
