@@ -51,9 +51,28 @@
     return lineas.join("\n");
   }
 
+  // Guarda el lead en el CRM. Fire-and-forget: NO se hace await para no perder el
+  // "gesto de usuario" (los navegadores bloquean window.open tras un await) ni
+  // romper el contacto si Supabase falla. El estado/origen los pone el default del schema.
+  function capturarLead() {
+    if (!API.guardarLead) return;
+    API.guardarLead({
+      nombre: valor("nombre"),
+      empresa: valor("empresa") || null,
+      sector: valor("sector") || null,
+      ciudad: valor("ciudad") || null,
+      contacto: valor("contacto") || null,
+      dedica: valor("dedica") || null,
+      canales: marcados("canales"),
+      dolores: marcados("dolores"),
+      prioridad: valor("prioridad") || null,
+    });
+  }
+
   function enviarWhatsApp() {
     if (!validar()) return;
     const texto = construirMensaje();
+    capturarLead();
     if (API.waValido && API.waUrl) {
       window.open(API.waUrl(texto), "_blank", "noopener");
     } else if (API.correoValido && API.CONFIG) {
@@ -79,6 +98,7 @@
     btnCorreo.addEventListener("click", (e) => {
       e.preventDefault();
       if (!validar()) return;
+      capturarLead();
       window.location.href = mailtoUrl(construirMensaje());
     });
   }

@@ -13,6 +13,11 @@ const CONFIG = {
   instagram: "",
   linkedin:  "",
   github:   "https://github.com/gian992023",
+  // CRM · captura de leads en Supabase. Estos valores son PÚBLICOS por diseño
+  // (la seguridad la da el RLS). Mientras estén vacíos, el formulario sigue
+  // funcionando solo con WhatsApp/correo. Pega aquí URL y "anon key".
+  supabaseUrl: "",
+  supabaseAnonKey: "",
 };
 
 // Mensajes prellenados para WhatsApp según el botón
@@ -177,6 +182,29 @@ const NAV = [
     });
   });
 
-  // Exponer helper para páginas con formulario (diagnóstico)
-  window.ConfIA = { waUrl, waValido, correoValido, CONFIG };
+  // --- CRM: guardar lead en Supabase (carga diferida de la librería) ---
+  const crmActivo = Boolean(CONFIG.supabaseUrl && CONFIG.supabaseAnonKey);
+  let sbClient = null;
+  async function getSupabase() {
+    if (sbClient) return sbClient;
+    const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
+    sbClient = createClient(CONFIG.supabaseUrl, CONFIG.supabaseAnonKey);
+    return sbClient;
+  }
+  // Guarda el lead sin romper nunca el flujo de contacto: si algo falla, solo avisa en consola.
+  async function guardarLead(datos) {
+    if (!crmActivo) return { ok: false, motivo: "crm-inactivo" };
+    try {
+      const sb = await getSupabase();
+      const { error } = await sb.from("leads").insert(datos);
+      if (error) throw error;
+      return { ok: true };
+    } catch (e) {
+      console.warn("[ConfIA] No se pudo guardar el lead:", (e && e.message) || e);
+      return { ok: false, motivo: "error" };
+    }
+  }
+
+  // Exponer helpers para páginas con formulario (diagnóstico)
+  window.ConfIA = { waUrl, waValido, correoValido, CONFIG, guardarLead, crmActivo };
 })();
