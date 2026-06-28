@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Diagnóstico de IA · ConfIA</title>
+  <meta name="description" content="Pide tu Diagnóstico de IA: analizamos tu operación y te entregamos un Mapa de Oportunidades con qué automatizar, el ahorro estimado y por dónde empezar. Sin compromiso." />
+  <meta name="theme-color" content="#2563EB" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:title" content="Diagnóstico de IA · ConfIA" />
+  <meta property="og:description" content="Descubre qué automatizar y cuánto puedes ahorrar. Pide tu Diagnóstico de IA, sin compromiso." />
+  <meta property="og:image" content="https://gian992023.github.io/confia-web/assets/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://gian992023.github.io/confia-web/assets/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink: "#0A0A0A", body: "#4B5563", accent: { DEFAULT: "#2563EB", dark: "#1D4ED8" }, wa: { DEFAULT: "#16A34A", dark: "#15803D" }, line: "#E5E7EB", soft: "#F5F5F7" },
+        fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'] },
+        borderRadius: { '2xl': '1rem' },
+      } },
+    };
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-page="diagnostico" class="bg-white font-sans text-body antialiased">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-white">Saltar al contenido</a>
+
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 border-b border-line bg-white/90 backdrop-blur"></header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="pt-28 pb-12 sm:pt-32 sm:pb-16">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-soft px-3 py-1 text-xs font-semibold text-accent">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span> Producto de entrada
+        </p>
+        <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">El Diagnóstico de IA</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-body">
+          Analizamos cómo funciona tu negocio y te entregamos un <strong class="font-semibold text-ink">Mapa de
+          Oportunidades</strong>: qué procesos puedes automatizar, cuánto podrías ahorrar y por dónde empezar.
+          Claro, en tu idioma y sin compromiso.
+        </p>
+        <a href="#formulario" class="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-accent-dark">Pedir mi diagnóstico</a>
+      </div>
+    </section>
+
+    <!-- QUÉ RECIBES -->
+    <section class="bg-soft py-16 sm:py-20">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Qué recibes</h2>
+          <p class="mt-4 text-lg text-body">Un entregable concreto, no una charla de humo.</p>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-ink">Procesos priorizados</h3>
+            <p class="mt-2 text-sm leading-relaxed text-body">Lista de lo que puedes automatizar, ordenado por impacto y esfuerzo.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-ink">Ahorro y ROI estimados</h3>
+            <p class="mt-2 text-sm leading-relaxed text-body">Cifras conservadoras con supuestos a la vista. Para decidir con números.</p>
+          </article>
+          <article class="rounded-2xl border border-line bg-white p-6 shadow-sm">
+            <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-ink">Un primer paso claro</h3>
+            <p class="mt-2 text-sm leading-relaxed text-body">La automatización de mayor impacto y menor esfuerzo para arrancar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="formulario" class="scroll-mt-16 py-16 sm:py-20">
+      <div class="mx-auto max-w-2xl px-4 sm:px-6">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Cuéntanos de tu negocio</h2>
+          <p class="mt-4 text-base text-body">Responde lo que sepas (con estimaciones basta). Al enviar, se abre WhatsApp con tus respuestas listas para mandárnoslas.</p>
+        </div>
+
+        <form id="form-diagnostico" class="mt-10 space-y-6" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="nombre" class="block text-sm font-semibold text-ink">Tu nombre <span class="text-accent">*</span></label>
+              <input id="nombre" name="nombre" type="text" required autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30" />
+            </div>
+            <div>
+              <label for="empresa" class="block text-sm font-semibold text-ink">Empresa o negocio <span class="text-accent">*</span></label>
+              <input id="empresa" name="empresa" type="text" required autocomplete="organization" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30" />
+            </div>
+            <div>
+              <label for="sector" class="block text-sm font-semibold text-ink">Sector</label>
+              <input id="sector" name="sector" type="text" placeholder="comercio, servicios, clínica, restaurante…" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30" />
+            </div>
+            <div>
+              <label for="ciudad" class="block text-sm font-semibold text-ink">Ciudad</label>
+              <input id="ciudad" name="ciudad" type="text" value="Yopal" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30" />
+            </div>
+          </div>
+
+          <div>
+            <label for="contacto" class="block text-sm font-semibold text-ink">WhatsApp o teléfono de contacto <span class="text-accent">*</span></label>
+            <input id="contacto" name="contacto" type="tel" required autocomplete="tel" placeholder="3xx xxx xxxx" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30" />
+          </div>
+
+          <div>
+            <label for="dedica" class="block text-sm font-semibold text-ink">¿A qué se dedica tu negocio?</label>
+            <textarea id="dedica" name="dedica" rows="2" placeholder="¿Qué vendes y a quién?" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"></textarea>
+          </div>
+
+          <fieldset>
+            <legend class="text-sm font-semibold text-ink">¿Por dónde te contactan tus clientes?</legend>
+            <div class="mt-2 flex flex-wrap gap-x-6 gap-y-2">
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="canales" value="WhatsApp" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> WhatsApp</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="canales" value="Llamada" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Llamada</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="canales" value="Redes sociales" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Redes</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="canales" value="Presencial" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Presencial</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="canales" value="Web" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Web</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="text-sm font-semibold text-ink">¿Qué te quita más tiempo hoy?</legend>
+            <div class="mt-2 flex flex-wrap gap-x-6 gap-y-2">
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="dolores" value="Atención manual" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Atención manual</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="dolores" value="Seguimiento de ventas" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Seguimiento de ventas</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="dolores" value="Cotizaciones" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Cotizaciones</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="dolores" value="Cobranza" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Cobranza</label>
+              <label class="inline-flex items-center gap-2 text-sm text-body"><input type="checkbox" name="dolores" value="Reportes / administración" class="h-4 w-4 rounded border-line text-accent focus:ring-accent" /> Reportes</label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="prioridad" class="block text-sm font-semibold text-ink">Si pudieras quitarte UNA tarea de encima mañana, ¿cuál sería?</label>
+            <textarea id="prioridad" name="prioridad" rows="2" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"></textarea>
+          </div>
+
+          <p id="form-error" class="hidden rounded-xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700" role="alert"></p>
+
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <button type="submit" class="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-wa px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-wa-dark">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.26l-.999 3.648 3.973-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              Enviar por WhatsApp
+            </button>
+            <a id="enviar-correo" href="#" class="inline-flex items-center justify-center gap-2 rounded-xl border border-line px-6 py-3 text-base font-semibold text-ink transition hover:bg-soft">Enviar por correo</a>
+          </div>
+          <p class="text-center text-xs text-body">No guardamos tus datos en este sitio: tus respuestas se envían directo a ConfIA por el canal que elijas.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="border-t border-line bg-white py-10"></footer>
+
+  <script src="main.js"></script>
+  <script src="diagnostico.js"></script>
+</body>
+</html>
