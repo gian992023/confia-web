@@ -16,8 +16,8 @@ const CONFIG = {
   // CRM · captura de leads en Supabase. Estos valores son PÚBLICOS por diseño
   // (la seguridad la da el RLS). Mientras estén vacíos, el formulario sigue
   // funcionando solo con WhatsApp/correo. Pega aquí URL y "anon key".
-  supabaseUrl: "",
-  supabaseAnonKey: "",
+  supabaseUrl: "https://drwjfvbsebydirbvsxvw.supabase.co",
+  supabaseAnonKey: "sb_publishable_Fv7-p4kwfGPov5KCtLm4dw_PwyIKU2_",
 };
 
 // Mensajes prellenados para WhatsApp según el botón
