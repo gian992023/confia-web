@@ -113,16 +113,21 @@ const NAV = [
   const elFooter = document.getElementById("site-footer");
   if (elFooter) elFooter.innerHTML = footerHTML();
 
-  // --- Cablear CTAs (sin backend: wa.me y mailto) ---
+  // --- Cablear CTAs ---
+  // 'agenda' -> formulario de diagnóstico (CAPTURA el lead al CRM).
+  // 'whatsapp' -> chat directo (opción secundaria). 'correo' -> mailto.
   document.querySelectorAll('[data-cta]').forEach((el) => {
     const tipo = el.getAttribute('data-cta');
-    if (tipo === 'correo') {
+    if (tipo === 'agenda') {
+      el.setAttribute('href', 'diagnostico.html');
+      el.removeAttribute('target');
+    } else if (tipo === 'correo') {
       if (correoValido) {
         const asunto = encodeURIComponent('Quiero agendar mi Diagnóstico de IA');
         el.setAttribute('href', `mailto:${CONFIG.correo}?subject=${asunto}`);
       }
-    } else if (waValido) { // agenda o whatsapp -> WhatsApp
-      el.setAttribute('href', waUrl(tipo === 'agenda' ? MENSAJES.agenda : MENSAJES.whatsapp));
+    } else if (waValido) { // whatsapp directo
+      el.setAttribute('href', waUrl(MENSAJES.whatsapp));
       el.setAttribute('target', '_blank');
       el.setAttribute('rel', 'noopener');
     }
