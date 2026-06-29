@@ -66,7 +66,7 @@ const NAV = [
     }).join("");
     return `
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-    <a href="index.html" class="text-xl font-extrabold tracking-tight text-ink" aria-label="ConfIA, inicio">Conf<span class="text-accent">IA</span></a>
+    <a href="index.html" class="group inline-flex items-center text-2xl font-extrabold tracking-tight text-ink" aria-label="ConfIA, inicio">Conf<span class="ml-px rounded-lg bg-accent px-1.5 pb-0.5 leading-none text-white shadow-sm transition group-hover:bg-accent-dark group-hover:shadow">IA</span></a>
     <nav class="hidden items-center gap-7 md:flex" aria-label="Principal">
       ${items}
       <a data-cta="agenda" href="#" class="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-accent-dark">Agenda tu diagnóstico</a>
