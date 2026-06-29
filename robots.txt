@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gian992023.github.io/confia-web/sitemap.xml
